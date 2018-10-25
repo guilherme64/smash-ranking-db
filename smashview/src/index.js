@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class App extends Component{
   render(){
     return(
-      'a'
+      <h1>Smash Ranking DB is (almost) ALIVE!</h1>
     );
   }
 }
