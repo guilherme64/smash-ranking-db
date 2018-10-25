@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Helloes</h2>
-      </div>
+class App extends Component{
+  render(){
+    return(
+      'a'
     );
   }
 }
-ReactDOM.render( <App /> , document.getElementById('root'));
+
+ReactDOM.render(<App />, document.getElementById('root'));
