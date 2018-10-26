@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Player from './Player';
+
 const API = 'http://localhost:8000/api/players';
 
 class List extends Component{
@@ -14,18 +16,17 @@ class List extends Component{
   }
   
   render(){
-    const players = Array.from(this.state.players).map(function(cur){
+    const players = Array.from(this.state.players).map(function(cur, index){
       return [cur.name, cur.score];
     });
     console.log(players);
-
-   
-
    
     return(
       <div>
         <h2>Players</h2>
-        {players}
+        {players.map(function(cur, index){
+          return <Player key={index+1} name={cur[0]} score = {cur[1]} />
+        })}
       </div>
     ); 
   }
