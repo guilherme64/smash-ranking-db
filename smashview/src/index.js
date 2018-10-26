@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import List from './components/list';
+import List from './components/List';
 import style from './style.css';
 class App extends Component{
   render(){
