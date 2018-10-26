@@ -4,7 +4,7 @@ const API = 'http://localhost:8000/api/players';
 class List extends Component{
   constructor(props){
     super(props);
-    this.state = {players: null}
+    this.state = {players: 'a'}
   }
 
   componentDidMount(){
@@ -14,8 +14,14 @@ class List extends Component{
   }
   
   render(){
-    const players = this.state.players;
+    const players = Array.from(this.state.players).map(function(cur){
+      return [cur.name, cur.score];
+    });
     console.log(players);
+
+   
+
+   
     return(
       <div>
         <h2>Players</h2>
