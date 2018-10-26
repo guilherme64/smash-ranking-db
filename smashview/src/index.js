@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import List from './components/list';
+import style from './style.css';
 class App extends Component{
   render(){
     return(
-      <h1>Smash Ranking DB is ALIVE!</h1>
+      <div>
+        <h1>Smash Ranking DB is ALIVE!</h1>
+        <List />
+      </div>
+      
     );
   }
 }
