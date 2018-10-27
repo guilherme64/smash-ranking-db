@@ -6,6 +6,7 @@ class Player extends Component{
     this.state = {name: this.props.name, score: this.props.score};
   }
   render(){
+    console.log(this.state.name);
     return(
       <div>
         <p>Jogador: {this.state.name}</p>
