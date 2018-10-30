@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from './Player-style.css';
 
 class Player extends Component{
   constructor(props){
@@ -8,7 +9,7 @@ class Player extends Component{
   render(){
     console.log(this.state.name);
     return(
-      <div>
+      <div className = 'playerlist'>
         <p>Jogador: {this.state.name}</p>
         <p>Score: {this.state.score}</p>
       </div>

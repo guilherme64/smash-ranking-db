@@ -28,7 +28,11 @@ class List extends Component{
 
         {players.map(function(cur, index){
           console.log(cur);
-          return <Player key={index+1} name={cur[0]} score = {cur[1]} />
+          return(
+              <a href='#'>
+                <Player key={index+1} name={cur[0]} score = {cur[1]} />
+              </a>
+          );
         })}
       </div>
     ); 

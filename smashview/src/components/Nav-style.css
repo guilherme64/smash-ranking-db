@@ -1,18 +1,18 @@
 .nav {
-    background-color: #385F94;
+    background-color: rgb(133, 52, 140);
     width: 100%;
     height: 3em;
     padding-right: calc(width - 5px);
-    padding-top: 5px;
-    padding-bottom: 5px;
+}
+
+.nav--list {
+    padding-left: 0;
 }
 
 .nav--elm {
-    display: inline;
+    display: inline-block;
     list-style-type: none;
-    border: rgb(88, 153, 218) solid 2px;
     background-color: rgb(88, 153, 218);
-    border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
     padding: 5px;
@@ -21,4 +21,5 @@
 .nav--elm__title {
     font-size: 2em;
     margin-left: 0px;
+    padding-left: 0px;
 }
