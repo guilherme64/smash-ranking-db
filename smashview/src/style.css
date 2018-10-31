@@ -7,6 +7,7 @@ body {
     background-color: rgb(235, 227, 228);
     color: #1E1420;
     text-decoration: none;
+    width: 100%;
 }
 
 a:link {

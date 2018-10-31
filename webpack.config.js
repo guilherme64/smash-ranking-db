@@ -11,18 +11,24 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
-            include: __dirname + "/smashview\/\src/",
+            test: /\.jsx?$/,
             exclude: /node_modules/,
-            use: ["babel-loader"]
+            use: ["babel-loader"],
+            resolve: {
+                extensions: ['.js', '.jsx'],
+            }
 
+        }, {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
         }]
     },
+
     devServer: {
         port: 3000,
         open: true,
     },
-    plugins: [
+    plugins: ["babel-plugin-styled-components",
         new CleanWebpackPlugin(['/smashview/' + outputDirectory]),
         new HtmlWebpackPlugin({
             template: "./smashview/public/index.html",
