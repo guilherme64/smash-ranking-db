@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+const API = 'http://localhost:8000/api/players';
 
+
+const Form = styled.form`
+  margin-top:20px;
+  margin-bottom:20px;
+`;
 const Label = styled.label`
   font-size: 1.5em;
+  font-family: sans-serif;
 `;
 
 const Input = styled.input.attrs({
@@ -31,15 +38,34 @@ const Submit = styled.input.attrs({
 `;
 
 class PlayerInput extends Component{
+    constructor(props){
+      super(props);
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+      this.state = {value: ''}
+    }
+
+    handleChange(event){
+      this.setState({value: event.target.value});
+    }
+    handleSubmit(event){
+      //post na api
+      console.log('mandou '+ this.state.value);
+      console.log('entrando');
+      fetch(API,{
+        method:'POST'
+      }).then(response=>response.json()).then(players =>this.setState({players}));
+      console.log(this.state.players);
+    }
 
     render(){
       return(
-          <form>
-            <Label>Add player: 
-                <Input type='text' />
+          <Form onSubmit = {this.handleSubmit}>
+            <Label>Here Comes a New Challenger: 
+                <Input type='text' value={this.state.value} onChange = {this.handleChange} required />
                 <Submit type='submit' />
             </Label>
-          </form>
+          </Form>
       );
     }
 
