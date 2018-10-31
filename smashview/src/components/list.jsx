@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import Player from './Player';
 
+import styled, { css } from 'styled-components';
+
 const API = 'http://localhost:8000/api/players';
 
+const Title = styled.h1`
+  font-family: sans-serif;
+  font-size: 1.5em;
+`;
 class List extends Component{
   constructor(props){
     super(props);
@@ -24,8 +30,7 @@ class List extends Component{
    
     return(
       <div>
-        <h2>Players</h2>
-
+        <Title>Players</Title>
         {players.map(function(cur, index){
           console.log(cur);
           return(

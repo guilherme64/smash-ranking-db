@@ -3,21 +3,22 @@ import style from'./Nav-style.css';
 import styled, { css } from 'styled-components';
 
 const Navbar = styled.nav`
-  background-color: rgb(174, 61, 184);
+  background-color: #DC3D59;
   color: white;
   font-size:1.5em;
+  font-family: sans-serif;
 `;
 
 const NavItem = styled.li`
   text-align:center;
-  width:80px;
+  width:150px;
   color:white;
   height: 100%;
   list-style-type: none;
   display: inline-block;
   padding:5px;
   &:hover{
-    background-color:rgb(216, 121, 225);
+    background-color:rgb(210, 47, 77);
   }
   
 `;
@@ -34,12 +35,8 @@ class Nav extends Component{
     return(
       <Navbar>
         <NavItem><Link href='#'>Smash</Link></NavItem>
-        <NavItem>
-          hue
-        </NavItem>
-        <NavItem>
-          hue
-        </NavItem>
+        <NavItem><Link href='#'>Jogadores</Link></NavItem>
+        <NavItem><Link href='#'>Campeonatos</Link></NavItem>
       </Navbar>
     );
   }

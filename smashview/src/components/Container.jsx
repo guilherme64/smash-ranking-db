@@ -1,6 +1,7 @@
 import React from 'react';
 import List from './List';
 import Nav from './Nav';
+import PlayerInput from './PlayerInput';
  
  class Container extends React.Component{
  constructor(props){
@@ -16,6 +17,7 @@ import Nav from './Nav';
     return(
         <div>
           <Nav />
+          <PlayerInput />
           <List />
         </div>   
     );

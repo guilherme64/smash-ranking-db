@@ -4,10 +4,42 @@
 }
 
 body {
-    background-color: rgb(235, 227, 228);
-    color: #1E1420;
+    background-color: rgb(244, 240, 239);
+    color: #292331;
     text-decoration: none;
     width: 100%;
+}
+
+.border {
+    background-color: rgb(201, 166, 170);
+}
+
+.cur-bg {
+    background-color: rgb(244, 240, 239);
+}
+
+.brick-red {
+    background: rgb(196, 40, 69);
+}
+
+.goldenrod {
+    background: #DBA938;
+}
+
+.medium-aquamarine {
+    background: #7DCABF;
+}
+
+.thistle {
+    background: #E9DAD8;
+}
+
+.dark-slate-gray {
+    background: #292331;
+}
+
+.dark-slate-blue {
+    background: #385F94;
 }
 
 
