@@ -13,6 +13,7 @@ exports.addPlayer = function(req, res) {
     var player = new Player();
     player.name = req.body.name;
     player.score = req.body.score;
+    console.log('player score is' + player.score);
     player.save(function(err) {
         if (err) {
             res.send('erro salvando jogador');

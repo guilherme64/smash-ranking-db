@@ -42,7 +42,7 @@ class PlayerInput extends Component{
       super(props);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleChange = this.handleChange.bind(this);
-      this.state = {value: ''}
+      this.state = {value: '', message: ''}
     }
 
     handleChange(event){
@@ -53,9 +53,14 @@ class PlayerInput extends Component{
       console.log('mandou '+ this.state.value);
       console.log('entrando');
       fetch(API,{
-        method:'POST'
-      }).then(response=>response.json()).then(players =>this.setState({players}));
-      console.log(this.state.players);
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name: this.state.value,
+          score: 0
+        })
+      }).then(response=>response.json()).then(message =>this.setState({message}));
+      console.log(this.state.message);
     }
 
     render(){
