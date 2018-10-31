@@ -61,6 +61,9 @@ class PlayerInput extends Component{
         })
       }).then(response=>response.json()).then(message =>this.setState({message}));
       console.log(this.state.message);
+
+      window.location.reload();
+      this.setState({value:''});
     }
 
     render(){
